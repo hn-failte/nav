@@ -1,0 +1,305 @@
+/* Version: 4.0 */
+.inCenter {
+  margin: 0 auto;
+}
+body {
+  background: url(../images/bg_1.jpg) no-repeat;
+  background-size: 100% 100%;
+  font-family: "微软雅黑";
+}
+a {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "微软雅黑";
+}
+@keyframes titleani1 {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  38.4% {
+    top: 0;
+    left: 195px;
+  }
+  50% {
+    top: 55px;
+    left: 195px;
+  }
+  88.4% {
+    top: 55px;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+@keyframes titleani2 {
+  0% {
+    bottom: 0;
+    right: 0;
+  }
+  38.4% {
+    bottom: 0;
+    right: 195px;
+  }
+  50% {
+    bottom: 55px;
+    right: 195px;
+  }
+  88.4% {
+    bottom: 55px;
+    right: 0;
+  }
+}
+@keyframes tdani1 {
+  0% {
+    top: 0;
+    right: 0;
+    opacity: 1;
+  }
+  25% {
+    top: 26px;
+    right: 0;
+    opacity: 0;
+  }
+  50% {
+    top: 55px;
+    right: 0;
+    opacity: 1;
+  }
+  75% {
+    top: 26px;
+    right: 0;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    right: 0;
+    opacity: 1;
+  }
+}
+@keyframes tdani2 {
+  0% {
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+  }
+  25% {
+    bottom: 26px;
+    right: 0;
+    opacity: 0;
+  }
+  50% {
+    bottom: 55px;
+    right: 0;
+    opacity: 1;
+  }
+  75% {
+    bottom: 26px;
+    right: 0;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+  }
+}
+.header-box {
+  height: 80px;
+}
+.header-box .header {
+  margin: 0 auto;
+  width: 1200px;
+  height: 80px;
+}
+.header-box .header .logo {
+  float: left;
+  width: 100px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  color: darkblue;
+}
+.header-box .header .title {
+  float: left;
+  width: 190px;
+  height: 50px;
+  margin: 10px 400px;
+  line-height: 50px;
+  border: 5px solid #666;
+  background: silver;
+  color: gold;
+  text-align: center;
+  position: relative;
+}
+.header-box .header .title:before {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  margin: -5px 0 0 -5px;
+  background: #fff;
+  content: "";
+  width: 5px;
+  height: 5px;
+  box-shadow: 1px 0px 1px 1px silver, -1px 0px 1px 1px silver;
+  animation: titleani1 10s linear infinite;
+}
+.header-box .header .title:after {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  margin: 0 -5px -5px 0;
+  background: #fff;
+  content: "";
+  width: 5px;
+  height: 5px;
+  box-shadow: 1px 0px 1px 1px silver, -1px 0px 1px 1px silver;
+  animation: titleani2 10s linear infinite;
+}
+.header-box .header .realtime {
+  float: right;
+  width: 100px;
+  height: 40px;
+  margin: 20px 0;
+  line-height: 40px;
+  color: skyblue;
+  text-align: center;
+}
+.search-box {
+  margin-top: 50px;
+  height: 100px;
+  width: 100%;
+}
+.search-box .search {
+  margin: 0 auto;
+  height: 100px;
+  width: 600px;
+}
+.search-box .search .search-logo {
+  float: left;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 40px;
+  text-align: center;
+  color: #052bff;
+  background: #fff;
+  border-radius: 50%;
+}
+.search-box .search .search-switch {
+  float: left;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 10px 10px;
+  line-height: 30px;
+  font-size: 24px;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+}
+.search-box .search .search-input {
+  float: left;
+  padding-left: 10px;
+  width: 390px;
+  height: 50px;
+  background: #fff;
+  border: none;
+}
+.search-box .search .search-btn {
+  float: left;
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #ccc;
+  border: none;
+  position: relative;
+}
+.search-box .search .search-btn span {
+  display: inline-block;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #000;
+  border-right: none;
+  margin-right: 5px;
+}
+.wrapper-box {
+  height: 450px;
+  width: 100%;
+}
+.wrapper-box .wrapper {
+  margin: 0 auto;
+  height: 450px;
+  width: 1200px;
+}
+.wrapper-box .wrapper table {
+  margin: 0 auto;
+  table-layout: fixed;
+  width: 830px;
+  height: 350px;
+  border: none;
+  border-spacing: 5px;
+}
+.wrapper-box .wrapper table td {
+  width: 150px;
+  height: 60px;
+  border: 5px solid #fff;
+  background: #006ccc;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wrapper-box .wrapper table td a {
+  color: #fff;
+}
+.wrapper-box .wrapper table td:hover {
+  position: relative;
+  z-index: 0;
+  background: #eee;
+}
+.wrapper-box .wrapper table td:hover:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #f00, #ff0, #f0f, #0f0, #909, #0ff, #00f);
+  animation: tdani1 10s linear infinite;
+}
+.wrapper-box .wrapper table td:hover:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: "";
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #f00, #ff0, #f0f, #0f0, #909, #0ff, #00f);
+  animation: tdani2 10s linear infinite;
+}
+.wrapper-box .wrapper table td:hover a {
+  color: #f00;
+}
+.footer-box {
+  height: 80px;
+  width: 100%;
+  background: #000;
+  color: #fff;
+}
+.footer-box .footer {
+  margin: 0 auto;
+  height: 40px;
+  line-height: 20px;
+  font-size: 12px;
+  padding: 20px 0;
+  width: 1200px;
+  text-align: center;
+}

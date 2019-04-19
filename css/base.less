@@ -1,0 +1,79 @@
+@fullWidth: 1200px;
+@headerHeight: 80px;
+@searchHeight: 100px;
+@wrapperHeight: 650px;
+@footerHeight: 80px;
+
+.inCenter{
+	margin: 0 auto;
+}
+
+.triangle(@width, @direction) when(@direction=top){
+	border-left: @width solid transparent;
+	border-right: @width solid transparent;
+	border-top: none;
+	border-bottom: @width solid #ecf0f1;
+}
+.triangle(@width, @direction) when(@direction=bottom){
+	border-left: @width solid transparent;
+	border-right: @width solid transparent;
+	border-top: @width solid #ecf0f1;
+	border-bottom: none;
+}
+.triangle(@width, @direction) when(@direction=left){
+	border-left: none;
+	border-right: @width solid #ecf0f1;
+	border-top: @width solid transparent;
+	border-bottom: @width solid transparent;
+}
+.triangle(@width, @direction) when(@direction=right){
+	border-left: @width solid #ecf0f1;
+	border-right: none;
+	border-top: @width solid transparent;
+	border-bottom: @width solid transparent;
+}
+// @font-face{
+// 	font-family: "hydyt";
+// 	src: url("../font/hydyt.ttf");
+// }
+
+body{
+	background: url(../images/bg_1.jpg) no-repeat;
+	background-size: 100% 100%;
+	font-family: "微软雅黑";
+}
+
+a{
+	font-size: 16px;
+	font-weight: bold;
+	font-family: "微软雅黑";
+}
+
+@keyframes titleani1{
+	0%    { top: 0; left: 0; .triangle(5px, right); }
+	38.4%   { top: 0; left: 195px; .triangle(5px, bottom); }
+	50%   { top: 55px; left: 195px; .triangle(5px, left); }
+	88.4%   { top: 55px; left: 0; .triangle(5px, top); }
+	100%  { top: 0; left: 0; .triangle(5px, right); }
+}
+@keyframes titleani2{
+	0%    { bottom: 0; right: 0; .triangle(5px, left); }
+	38.4%   { bottom: 0; right: 195px; .triangle(5px, top); }
+	50%   { bottom: 55px; right: 195px; .triangle(5px, right); }
+	88.4%   { bottom: 55px; right: 0; .triangle(5px, bottom); }
+	100%  { bottom: 0; right: 0; .triangle(5px, left); }
+}	
+@keyframes tdani1{
+	0%    { top: 0; right: 0; opacity: 1; }
+	25%   { top: 26px; right: 0; opacity: 0 }
+	50%   { top: 55px; right: 0; opacity: 1; }
+	75%   { top: 26px; right: 0; opacity: 0; }
+	100%  { top: 0; right: 0; opacity: 1; }
+}
+@keyframes tdani2{
+	0%    { bottom: 0; right: 0; opacity: 1; }
+	25%   { bottom: 26px; right: 0; opacity: 0 }
+	50%   { bottom: 55px; right: 0; opacity: 1; }
+	75%   { bottom: 26px; right: 0; opacity: 0; }
+	100%  { bottom: 0; right: 0; opacity: 1; }
+}
